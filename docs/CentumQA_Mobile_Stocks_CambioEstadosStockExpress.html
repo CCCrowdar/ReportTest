@@ -1,0 +1,4106 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ExtentReports</title>
+        <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+	    <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@6fbbd1c32fbc2463d026da5c6ce2e9eef0d29512/spark/css/spark-style.css" rel="stylesheet" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+
+</style></head>    <script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa bdd-report standard">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+<div class="header navbar">
+    <div class="vheader">
+        <div class="nav-logo">
+          <a href="#">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">ExtentReports</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">ago. 14, 2025 06:19:27 p. m.</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div><div class="side-nav">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('tag-view')">
+        <a id="nav-tag" class="dropdown-toggle" href="tag.html">
+          <span class="icon-holder">
+            <i class="fa fa-tag"></i>
+          </span>
+          <span class="title">Tags</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>            <div class="vcontainer">
+                <div class="main-content">
+<div class="test-wrapper row test-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tests</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+						
+						
+						
+						
+						
+						<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-tag"></i>
+					</a>
+					<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+						<a class="dropdown-item" href="#">@RegressionExpress</a>
+						<a class="dropdown-item" href="#">@StockExpress</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_Crear</a>
+						<a class="dropdown-item" href="#">@Automated</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_Lote</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_SinArticulo</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_ArticuloDeshabilitado</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_SinEstado</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_Filtro</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_SinStock</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_CantNegativa</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_NoUbicacion</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_Pallets</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_PalletsDistintaSeccion</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_PalletsInexistente</a>
+						<a class="dropdown-item" href="#">@CambioEstadosStockExpress_PalletsCerrado</a>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item"  status="pass" test-id="1"
+					author=""
+					tag="@RegressionExpress @StockExpress @CambioEstadosStockExpress"
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">Funcionalidad Stocks Express - Cambio de Estados de Stock Express</p>
+							<p class="duration text-sm">0h 12m 1s+847ms</p>
+							<span class="datetime">18:19:32 p. m.</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">Funcionalidad Stocks Express - Cambio de Estados de Stock Express</h5>
+									<span class='badge badge-success'>08.14.2025 18:19:32</span>
+									<span class='badge badge-danger'>08.14.2025 18:31:34</span>
+									<span class='badge badge-default'>0h 12m 1s+847ms</span>
+								</div>
+								<div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @RegressionExpress</span>
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @StockExpress</span>
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @CambioEstadosStockExpress</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse scenario_outline">
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo ART01</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario visualiza mensaje express: Los artículos con cantidad mayor a cero se agregaron al cambio de estado stock correctamente.</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonCerrar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Cerrar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonGuardar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Guardar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioObtieneElNumeroDelComprobante(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El usuario obtiene el numero del Cambio de Estados de Stock Express y valida mensaje creado ok</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse scenario_outline">
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonSteps.elUsuarioAbreUnaNuevaVentana(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El usuario abre una nueva ventana con centum web</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="WelcomeSteps.elClienteHaceClickEnElMenuPrincipal()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start given" title="WelcomeSteps.elClienteHaceLaBusquedaDelMenu(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given El Usuario hace la busqueda del menu "Ajustes de Movimiento de Stock"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="ABMPedidosVentaSteps.elClienteHaceClickStocks(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en menu Stocks Ajustes de Movimiento de Stock</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="ABMAjustesMovimientoStockSteps.elClienteAgregaUnidadesAjusteMovimientoStockConControlLoteDelArticulo(String,String,String,int)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario agrega 1 unidades con Ajuste de Movimiento de Stock control de lote del articulo ConLote con lote LoteParaMobile y vencen en 15 días</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonSteps.elUsuarioCambiaVentana(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El usuario cambia a la ventana principal</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Deposito1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Con Lote, Sin preparación</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo ConLote</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaFechaVencimeinto(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la fecha de vencimiento 15 DIAS</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario visualiza mensaje express: Los artículos con cantidad mayor a cero se agregaron al cambio de estado stock correctamente.</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonCerrar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Cerrar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonGuardar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Guardar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioObtieneElNumeroDelComprobante(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El usuario obtiene el numero del Cambio de Estados de Stock Express y valida mensaje creado ok</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Artículo que no existe.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo Art3333</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: No se ha encontrado artículo con código</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo ART111</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: se encuentra deshabilitado.</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: Valide los campos incorrectos.</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse scenario_outline">
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioBuscarSeleccionarArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express busca por filtro y selecciona el código Articulo ART01</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario visualiza mensaje express: Los artículos con cantidad mayor a cero se agregaron al cambio de estado stock correctamente.</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonCerrar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Cerrar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonGuardar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Guardar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioObtieneElNumeroDelComprobante(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El usuario obtiene el numero del Cambio de Estados de Stock Express y valida mensaje creado ok</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo ART02</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: no posee suficiente stock</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo ART01</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en -1</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 001</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: Valide los campos incorrectos.</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Artículo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa el código Articulo ART01</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa la cantidad del Articulo en 1</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa Código Ubicación de Artículo Desde 005</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockDesde(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock desde = Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: No existe una ubicación con el código</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario crea un cambio de Stock con un Pallet de Artículos.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse scenario_outline">
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">El Usuario crea un cambio de Stock con un Pallet de Artículos.</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Tablas en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Pallets de Artículos Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Pallets de Artículos Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express selecciona la sucursal fisica = Deposito1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express selecciona la sección = Salón - Sin Lote Sin Preparación</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express completa Código Ubicación de Artículo Desde 001</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Agregar Artículo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express completa el código Articulo ART01</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express completa la cantidad del Articulo en 1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonCerrar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Cerrar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonGuardar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Guardar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioObtieneElNumeroDelComprobante(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El usuario obtiene el numero del Pallets de Artículos Express y valida mensaje creado ok</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Deposito1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón - Sin Lote Sin Preparación</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarPallets(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Pallets</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarIdPallets(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa con el id del Pallet ENCONTRADO</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Pallets hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario visualiza mensaje express: Los pallets de artículos con cantidad mayor a cero se agregaron al cambio de estado de stock correctamente.</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonCerrar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Cerrar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonGuardar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Guardar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioObtieneElNumeroDelComprobante(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El usuario obtiene el numero del Cambio de Estados de Stock Express y valida mensaje creado ok</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse scenario_outline">
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Tablas en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Pallets de Artículos Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Pallets de Artículos Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express selecciona la sucursal fisica = Deposito1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express selecciona la sección = Salón - Sin Lote Sin Preparación</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuariocompletaUbicacionDesde(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express completa Código Ubicación de Artículo Desde 001</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarArticulos(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Agregar Artículo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaElCodigoArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express completa el código Articulo ART01</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuariocompletaCantidadArticulo(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express completa la cantidad del Articulo en 1</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonCerrar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Cerrar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonGuardar(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Pallets de Artículos Express hace click en el botón Guardar</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioObtieneElNumeroDelComprobante(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El usuario obtiene el numero del Pallets de Artículos Express y valida mensaje creado ok</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarPallets(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Pallets</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarIdPallets(String,String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Express completa con el id del Pallet ENCONTRADO</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And El Usuario dentro de Cambio de Estados de Stock Pallets hace click en el botón Agregar y Volver</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then El Usuario visualiza mensaje express: El pallet no puede ser agregado por encontrarse en una sección distinta a la sección de la Orden de Traspaso.</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Deposito1</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón - Sin Lote Sin Preparación</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarPallets(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Pallets</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarIdPallets(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa con el id del Pallet 9999</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Pallets hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: no existe.</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="LoginExpressSteps.elClienteSeEncuentraLogueado()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given El Usuario se encuentra logueado en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteHaceClickEnElMenuPrincipalMobile()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario hace click en el menu principal de Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el menú de Stocks en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elClienteSeleccionaElSubModuloMobile(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario selecciona el sub menú Cambio de Estados de Stock Express en Centum Mobile</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="CommonExpressSteps.elUsuarioHaceClickCrearNuevo(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When El Usuario dentro de Cambio de Estados de Stock Express hace click en crear nuevo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSucursalFisica(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sucursal fisica = Planta</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.elUsuarioDentroDeExpressSeleccionaEstadoStockHacia(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona estado de stock hacia = No Operativo</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioDentroDeExpressSeleccionaLaSeccion(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express selecciona la sección = Salón</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarPallets(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express hace click en el botón Agregar Pallets</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="StocksExpressSteps.clickAgregarIdPallets(String,String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Express completa con el id del Pallet 12</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="CommonExpressSteps.elUsuarioHaceClickEnElBotonAgregarVolver(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And El Usuario dentro de Cambio de Estados de Stock Pallets hace click en el botón Agregar y Volver</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="CommonExpressSteps.elUsuarioVisualizaMensajeExpress(String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then El Usuario visualiza mensaje express: El pallet no puede ser agregado por no estar operativo.</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div><div class="test-wrapper row tag-view attributes-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Tags</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li>
+					<a href="#">
+					<span class="badge badge-primary">17</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@RegressionExpress</p>
+							<p class="duration text-sm">14 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>13</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@RegressionExpress</h4>
+							<span status="pass" class='badge badge-success'>13 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='1'>
+										Funcionalidad Stocks Express - Cambio de Estados de Stock Express
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='3'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='27'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:22:45 p. m.</td>
+									<td class='linked' test-id='58'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:23:30 p. m.</td>
+									<td class='linked' test-id='78'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:16 p. m.</td>
+									<td class='linked' test-id='98'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='113'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:25:38 p. m.</td>
+									<td class='linked' test-id='136'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:26:24 p. m.</td>
+									<td class='linked' test-id='156'>
+										El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:09 p. m.</td>
+									<td class='linked' test-id='176'>
+										El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='197'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='232'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:30:28 p. m.</td>
+									<td class='linked' test-id='263'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:31:01 p. m.</td>
+									<td class='linked' test-id='280'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@StockExpress</p>
+							<p class="duration text-sm">14 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>13</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@StockExpress</h4>
+							<span status="pass" class='badge badge-success'>13 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='1'>
+										Funcionalidad Stocks Express - Cambio de Estados de Stock Express
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='3'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='27'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:22:45 p. m.</td>
+									<td class='linked' test-id='58'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:23:30 p. m.</td>
+									<td class='linked' test-id='78'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:16 p. m.</td>
+									<td class='linked' test-id='98'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='113'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:25:38 p. m.</td>
+									<td class='linked' test-id='136'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:26:24 p. m.</td>
+									<td class='linked' test-id='156'>
+										El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:09 p. m.</td>
+									<td class='linked' test-id='176'>
+										El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='197'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='232'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:30:28 p. m.</td>
+									<td class='linked' test-id='263'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:31:01 p. m.</td>
+									<td class='linked' test-id='280'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress</p>
+							<p class="duration text-sm">14 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>13</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress</h4>
+							<span status="pass" class='badge badge-success'>13 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='1'>
+										Funcionalidad Stocks Express - Cambio de Estados de Stock Express
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='3'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='27'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:22:45 p. m.</td>
+									<td class='linked' test-id='58'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:23:30 p. m.</td>
+									<td class='linked' test-id='78'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:16 p. m.</td>
+									<td class='linked' test-id='98'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='113'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:25:38 p. m.</td>
+									<td class='linked' test-id='136'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:26:24 p. m.</td>
+									<td class='linked' test-id='156'>
+										El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:09 p. m.</td>
+									<td class='linked' test-id='176'>
+										El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='197'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='232'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:30:28 p. m.</td>
+									<td class='linked' test-id='263'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:31:01 p. m.</td>
+									<td class='linked' test-id='280'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_Crear</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>2</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_Crear</h4>
+							<span status="pass" class='badge badge-success'>2 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='2'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='3'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@Automated</p>
+							<p class="duration text-sm">18 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>18</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@Automated</h4>
+							<span status="pass" class='badge badge-success'>18 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='2'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:19:32 p. m.</td>
+									<td class='linked' test-id='3'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que no opera con Lote</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='26'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='27'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:22:45 p. m.</td>
+									<td class='linked' test-id='58'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:23:30 p. m.</td>
+									<td class='linked' test-id='78'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:16 p. m.</td>
+									<td class='linked' test-id='98'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='112'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='113'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:25:38 p. m.</td>
+									<td class='linked' test-id='136'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:26:24 p. m.</td>
+									<td class='linked' test-id='156'>
+										El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:09 p. m.</td>
+									<td class='linked' test-id='176'>
+										El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='196'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='197'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='231'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='232'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:30:28 p. m.</td>
+									<td class='linked' test-id='263'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:31:01 p. m.</td>
+									<td class='linked' test-id='280'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_Lote</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>2</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_Lote</h4>
+							<span status="pass" class='badge badge-success'>2 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='26'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:20:40 p. m.</td>
+									<td class='linked' test-id='27'>
+										El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock en una Sucursal Sección que Si opera con Lote.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_SinArticulo</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_SinArticulo</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:22:45 p. m.</td>
+									<td class='linked' test-id='58'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_ArticuloDeshabilitado</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_ArticuloDeshabilitado</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:23:30 p. m.</td>
+									<td class='linked' test-id='78'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_SinEstado</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_SinEstado</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:16 p. m.</td>
+									<td class='linked' test-id='98'>
+										El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo deshabilitado.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_Filtro</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>2</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_Filtro</h4>
+							<span status="pass" class='badge badge-success'>2 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='112'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:24:41 p. m.</td>
+									<td class='linked' test-id='113'>
+										El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock agregando Artículos por filtro de búsqueda.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_SinStock</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_SinStock</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:25:38 p. m.</td>
+									<td class='linked' test-id='136'>
+										El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo que no posee Stock.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_CantNegativa</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_CantNegativa</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:26:24 p. m.</td>
+									<td class='linked' test-id='156'>
+										El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Artículo con Cantidad Negativa.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_NoUbicacion</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_NoUbicacion</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:09 p. m.</td>
+									<td class='linked' test-id='176'>
+										El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Código Ubicación de Artículo que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_Pallets</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>2</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_Pallets</h4>
+							<span status="pass" class='badge badge-success'>2 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='196'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:27:56 p. m.</td>
+									<td class='linked' test-id='197'>
+										El Usuario crea un cambio de Stock con un Pallet de Artículos.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario crea un cambio de Stock con un Pallet de Artículos.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_PalletsDistintaSeccion</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>2</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_PalletsDistintaSeccion</h4>
+							<span status="pass" class='badge badge-success'>2 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='231'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:29:17 p. m.</td>
+									<td class='linked' test-id='232'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos de otra Sucursal y Sección.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_PalletsInexistente</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_PalletsInexistente</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:30:28 p. m.</td>
+									<td class='linked' test-id='263'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@CambioEstadosStockExpress_PalletsCerrado</p>
+							<p class="duration text-sm">1 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@CambioEstadosStockExpress_PalletsCerrado</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>18:31:01 p. m.</td>
+									<td class='linked' test-id='280'>
+										El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.
+										<div class="">
+											<span class="badge badge-default">Funcionalidad Stocks Express - Cambio de Estados de Stock Express.El Usuario intenta crear un cambio de Stock con un Pallet de Artículos que no existe.</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div>                    <!-- dashboard -->
+<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Features</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='parent-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='100%'>
+						<b>1</b> features passed
+						</small>
+					</div>
+					<div>
+						<small data-tooltip='0%'><b>0</b> features failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Scenarios</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='child-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='100%'><b>13</b> scenarios passed</small></div>
+					<div>
+						<small data-tooltip='0%'><b>0</b> scenarios failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Steps</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+					</div>
+				</div>
+				<div class="card-footer">
+					<div><small data-tooltip='100%'><b>225</b> steps passed</small></div>
+					<div>
+						<small data-tooltip='0%'><b>0</b> steps failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Features</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>100,00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Scenarios</h6>
+							<h2 class="font-size-28 font-weight-light mt-3">13</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+							<span>100,00%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Start</h6>
+							<h4 class="font-weight-light mt-4">ago. 14, 2025 06:19:27 p. m.</h4>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+					<div class="media justify-content-between">
+						<div class="card-header">
+							<h6 class="card-title">Duration</h6>
+							<h4 class="font-weight-light mt-4">0h 12m 6s+951ms</h4>
+							<span class="text-semibold font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 opacity-01"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Timeline</h6>
+				</div>
+				<div class="card-body">
+					<div class="">
+						<canvas id="timeline" height="120"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tags</h6>
+				</div>
+				<div class="table-overflow">
+					<table class="table table-sm">
+						<thead>
+							<tr class="bg-gray">
+								<th>Name</th>
+								<th>Passed</th>
+								<th>Failed</th>
+								<th>Skipped</th>
+								<th>Others</th>
+								<th>Passed %</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>@RegressionExpress</td>
+								<td>13</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									92,857%
+								</td>
+							</tr>
+							<tr>
+								<td>@StockExpress</td>
+								<td>13</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									92,857%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress</td>
+								<td>13</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									92,857%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_Crear</td>
+								<td>2</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@Automated</td>
+								<td>18</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_Lote</td>
+								<td>2</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_SinArticulo</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_ArticuloDeshabilitado</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_SinEstado</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_Filtro</td>
+								<td>2</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_SinStock</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_CantNegativa</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_NoUbicacion</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_Pallets</td>
+								<td>2</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_PalletsDistintaSeccion</td>
+								<td>2</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_PalletsInexistente</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+							<tr>
+								<td>@CambioEstadosStockExpress_PalletsCerrado</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									100%
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var statusGroup = {
+	    parentCount: 1,
+		passParent: 1,
+		failParent: 0,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 0,
+		childCount: 13,
+		passChild: 13,
+		failChild: 0,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 0,
+		grandChildCount: 225,
+		passGrandChild: 225,
+		failGrandChild: 0,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 0,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 0,
+		eventsCount: 225,
+		passEvents: 225,
+		failEvents: 0,
+		fatalEvents: 0,
+		errorEvents: 0,
+		warningEvents: 0,
+		skipEvents: 0,
+		infoEvents: 0,
+		debugEvents: 0,
+		exceptionsEvents: 0
+	};
+</script>
+<script>
+	var timeline = {
+	        "Funcionalidad Stocks Express - Cambio de Estados de Stock Express":721.847
+	};
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ac7abbc71b4bb073da00153a5a3fdbcfe0c95e2a/spark/js/spark-script.js"></script>
+<script type="text/javascript">
+
+
+</script></body>
+</html>
